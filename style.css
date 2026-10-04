@@ -1833,3 +1833,45 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-04 .разборы { grid-template-columns: 1fr; }  #экран-04 .разбор-карта__описание { min-height: 0; }
     #экран-04 .разбор-карта--средняя { transform: none; }
   }
+
+/* экран 05 */
+#экран-05 .э5-шапка { text-align: center; max-width: 44rem; margin-inline: auto; }
+  #экран-05 .э5-шапка > * { margin-inline: auto; }
+  #экран-05 .э5-кладка { list-style: none; margin: clamp(2rem, 4vw, 3rem) 0 0; padding: 0; column-count: 3; column-gap: 1.25rem; }
+  #экран-05 .э5-чат { break-inside: avoid; margin: 0 0 1.25rem; overflow: hidden; border-radius: var(--радиус-плитки); border: 1px solid transparent; }
+  #экран-05 .э5-чат__верх { display: grid; grid-template-columns: auto 1fr; column-gap: .75rem; align-items: center; padding: .875rem 1.125rem; border-bottom: 1px solid transparent; }
+  #экран-05 .э5-чат__буква { grid-row: span 2; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: grid; place-items: center;
+      font-size: var(--кегль-текст); font-weight: 700; line-height: 1; }
+  #экран-05 .э5-чат__кто { margin: 0; font-size: var(--кегль-текст); line-height: 1.3; font-weight: 700; }
+  #экран-05 .э5-чат__где { margin: 0; font-size: var(--кегль-мелкий); line-height: 1.35; }
+  #экран-05 .э5-чат__лента { display: grid; gap: .5rem; padding: 1.25rem 1.125rem 1.125rem 1.5rem; }
+  #экран-05 .э5-чат__облако { position: relative; margin: 0; padding: .75rem 1rem; max-width: 100%;
+      border-radius: var(--радиус-плитки); border-bottom-left-radius: 0; font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-05 .э5-чат__облако::before { content: ""; position: absolute; left: -.5rem; bottom: 0; width: .5rem; height: .75rem;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%); background: inherit; }
+  #экран-05 .э5-чат__тема { margin: 0; font-size: var(--кегль-мелкий); line-height: 1.35; }
+
+  #экран-05.светлый .э5-чат { background: var(--цвет-фон-карточки); border-color: var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-05.светлый .э5-чат__верх { border-bottom-color: var(--цвет-линия); }
+  #экран-05.светлый .э5-чат__буква { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
+  #экран-05.светлый .э5-чат__кто { color: var(--цвет-текст); }
+  #экран-05.светлый .э5-чат__где, #экран-05.светлый .э5-чат__тема { color: var(--цвет-текст-мягкий); }
+  #экран-05.светлый .э5-чат__лента { background: color-mix(in srgb, var(--цвет-акцент) 7%, var(--цвет-фон-карточки)); }
+  #экран-05.светлый .э5-чат__облако { background: var(--цвет-фон-карточки); color: var(--цвет-текст);
+      border-bottom: 1px solid var(--цвет-линия); }
+
+  #экран-05.тёмный .э5-чат { background: color-mix(in srgb, var(--цвет-тёмный-фон) 55%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); box-shadow: var(--тень-чип); }
+  #экран-05.тёмный .э5-чат__верх { border-bottom-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); }
+  #экран-05.тёмный .э5-чат__буква { background: color-mix(in srgb, var(--цвет-тёплый) 22%, transparent); color: var(--цвет-тёмный-текст); }
+  #экран-05.тёмный .э5-чат__кто { color: var(--цвет-тёмный-текст); }
+  #экран-05.тёмный .э5-чат__где, #экран-05.тёмный .э5-чат__тема { color: color-mix(in srgb, var(--цвет-тёмный-текст) 70%, transparent); }
+  #экран-05.тёмный .э5-чат__лента { background: color-mix(in srgb, var(--цвет-тёмный-фон) 35%, transparent); }
+  #экран-05.тёмный .э5-чат__облако { background: color-mix(in srgb, var(--цвет-тёмный-текст) 10%, var(--цвет-тёмный-фон)); color: var(--цвет-тёмный-текст); }
+
+  @media (max-width: 1099px) {
+    #экран-05 .э5-кладка { column-count: 2; }
+  }
+  @media (max-width: 699px) {
+    #экран-05 .э5-кладка { column-count: 1; }
+  }
