@@ -1875,3 +1875,54 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (max-width: 699px) {
     #экран-05 .э5-кладка { column-count: 1; }
   }
+
+/* экран 06 */
+#экран-06 .э6-разворот { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+  #экран-06 .э6-портрет { min-width: 0; position: sticky; top: 2rem; }
+  #экран-06 .э6-портрет .фото { margin: 0; }
+  #экран-06 .э6-портрет .фото img { object-position: 50% 15%; }
+  #экран-06 .э6-право { display: grid; gap: clamp(1.25rem, 2.5vw, 2rem); min-width: 0; }
+  #экран-06 .э6-право > * { margin: 0; }
+  #экран-06 .э6-пункты { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .875rem; list-style: none; margin: 0; padding: 0; }
+  #экран-06 .э6-пункт { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr; column-gap: 1rem; row-gap: .25rem; align-items: start;
+      padding: clamp(1rem, 1.8vw, 1.5rem); border-radius: var(--радиус-плитки); border: 1px solid transparent; min-width: 0; }
+  #экран-06 .э6-пункт--важно { border-width: 2px;    }
+  #экран-06 .э6-пункт__икон { grid-row: span 2; width: 2.75rem; height: 2.75rem; border-radius: var(--радиус); display: grid; place-items: center; }
+  #экран-06 .э6-пункт__икон svg, #экран-06 .э6-пункт__икон .иконка { width: 1.5rem; height: 1.5rem; }
+  #экран-06 .э6-пункт__имя { margin: 0; font-size: var(--кегль-лид); line-height: 1.25; font-weight: 700; }
+  #экран-06 .э6-пункт__текст { margin: 0; font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-06 .э6-доказ { display: flex; flex-wrap: wrap; gap: .625rem; list-style: none; margin: 0; padding: 0; }
+  #экран-06 .э6-доказ__пилюля { display: inline-block; padding: .625rem 1.25rem; border-radius: 9em; border: 1px solid transparent;
+      font-size: var(--кегль-мелкий); line-height: 1.3; font-weight: 600; }
+
+  #экран-06.светлый .э6-пункт { background: var(--цвет-фон-карточки); border-color: var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-06.светлый .э6-пункт--важно { background: var(--цвет-тёплый-мягкий); border-color: var(--цвет-акцент); }
+  #экран-06.светлый .э6-пункт__икон { background: color-mix(in srgb, var(--цвет-акцент) 10%, transparent); color: var(--цвет-акцент); }
+  #экран-06.светлый .э6-пункт__имя { color: var(--цвет-текст); }
+  #экран-06.светлый .э6-пункт__текст { color: var(--цвет-текст-мягкий); }
+  #экран-06.светлый .э6-пункт--важно .э6-пункт__текст { color: var(--цвет-текст); }
+  #экран-06.светлый .э6-доказ__пилюля { background: color-mix(in srgb, var(--цвет-акцент) 10%, transparent); color: var(--цвет-текст); border-color: var(--цвет-линия); }
+
+  #экран-06.тёмный .э6-пункт { background: color-mix(in srgb, var(--цвет-тёмный-фон) 55%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); box-shadow: var(--тень-чип); }
+  #экран-06.тёмный .э6-пункт--важно { background: color-mix(in srgb, var(--цвет-тёплый) 14%, transparent); border-color: var(--цвет-тёплый); }
+  #экран-06.тёмный .э6-пункт__икон { background: color-mix(in srgb, var(--цвет-тёплый) 16%, transparent); color: var(--цвет-тёплый); }
+  #экран-06.тёмный .э6-пункт__имя { color: var(--цвет-тёмный-текст); }
+  #экран-06.тёмный .э6-пункт__текст { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-06.тёмный .э6-пункт--важно .э6-пункт__текст { color: var(--цвет-тёмный-текст); }
+  #экран-06.тёмный .э6-пункт--важно .э6-пункт__икон { color: var(--цвет-тёмный-текст); background: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); }
+  #экран-06.светлый .э6-пункт--важно .э6-пункт__икон { color: var(--цвет-текст); }
+  #экран-06.тёмный .э6-доказ__пилюля { background: color-mix(in srgb, var(--цвет-тёплый) 14%, transparent); color: var(--цвет-тёмный-текст);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); }
+
+  @media (max-width: 899px) {
+    #экран-06 .э6-разворот { grid-template-columns: 1fr; }
+    #экран-06 .э6-портрет { position: static; max-width: 24rem; }
+  }
+  @media (max-width: 640px) {
+    #экран-06 .э6-пункты { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 420px) {
+    #экран-06 .э6-пункт { grid-template-columns: 1fr; }
+    #экран-06 .э6-пункт__икон { grid-row: auto; }
+  }
