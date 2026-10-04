@@ -1743,3 +1743,44 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-02 .мягкая--5 { grid-template-columns: 1fr; }
     #экран-02 .мягкая--5 .мягкая__икон { grid-row: auto; }
   }
+
+/* экран 03 */
+#экран-03 .э3-разворот { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+  #экран-03 .э3-лево { display: grid; gap: 1.5rem; align-content: start; min-width: 0; }
+  #экран-03 .э3-лево > * { margin: 0; }
+  #экран-03 .э3-слова { display: grid; gap: .625rem; justify-items: start; }
+  #экран-03 .э3-слова__подпись { font-size: var(--кегль-мелкий); line-height: 1.4; }
+  #экран-03 .э3-слова__фраза { display: inline-block; padding: .5rem 1rem; border-radius: var(--радиус-плитки);
+      font-size: var(--кегль-мелкий); line-height: 1.4; border: 1px solid transparent; margin: 0; }
+  #экран-03 .э3-ряды { display: grid; gap: .875rem; list-style: none; margin: 0; padding: 0; min-width: 0; }
+  #экран-03 .э3-ряд { display: grid; grid-template-columns: auto 1fr; column-gap: 1.25rem; row-gap: .25rem; align-items: start;
+      padding: clamp(1.125rem, 2vw, 1.75rem); border-radius: var(--радиус-плитки); border: 1px solid transparent; min-width: 0; }
+  #экран-03 .э3-ряд:nth-child(even) { margin-inline-start: clamp(0rem, 3vw, 2.5rem); }
+  #экран-03 .э3-ряд__икон { grid-row: span 2; width: 3rem; height: 3rem; border-radius: var(--радиус); display: grid; place-items: center; }
+  #экран-03 .э3-ряд__икон svg, #экран-03 .э3-ряд__икон .иконка { width: 1.5rem; height: 1.5rem; }
+  #экран-03 .э3-ряд__имя { margin: 0; font: 700 var(--кегль-лид)/1.25 var(--шрифт-заголовков); }
+  #экран-03 .э3-ряд__текст { margin: 0; font-size: var(--кегль-текст); line-height: 1.6; }
+
+  #экран-03.светлый .э3-слова__подпись { color: var(--цвет-текст-мягкий); }
+  #экран-03.светлый .э3-слова__фраза { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
+  #экран-03.светлый .э3-ряд { background: var(--цвет-фон-карточки); border-color: var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-03.светлый .э3-ряд__икон { background: color-mix(in srgb, var(--цвет-акцент) 10%, transparent); color: var(--цвет-акцент); }
+  #экран-03.светлый .э3-ряд__имя { color: var(--цвет-текст); }
+  #экран-03.светлый .э3-ряд__текст { color: var(--цвет-текст-мягкий); }
+
+  #экран-03.тёмный .э3-слова__подпись { color: color-mix(in srgb, var(--цвет-тёмный-текст) 70%, transparent); }
+  #экран-03.тёмный .э3-слова__фраза { background: color-mix(in srgb, var(--цвет-тёплый) 14%, transparent); color: var(--цвет-тёмный-текст); }
+  #экран-03.тёмный .э3-ряд { background: color-mix(in srgb, var(--цвет-тёмный-фон) 55%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); box-shadow: var(--тень-чип); }
+  #экран-03.тёмный .э3-ряд__икон { background: color-mix(in srgb, var(--цвет-тёплый) 16%, transparent); color: var(--цвет-тёплый); }
+  #экран-03.тёмный .э3-ряд__имя { color: var(--цвет-тёмный-текст); }
+  #экран-03.тёмный .э3-ряд__текст { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+
+  @media (max-width: 899px) {
+    #экран-03 .э3-разворот { grid-template-columns: 1fr; }
+    #экран-03 .э3-ряд:nth-child(even) { margin-inline-start: 0; }
+  }
+  @media (max-width: 520px) {
+    #экран-03 .э3-ряд { grid-template-columns: 1fr; }
+    #экран-03 .э3-ряд__икон { grid-row: auto; }
+  }
