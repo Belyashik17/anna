@@ -1692,3 +1692,54 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
   body.панель-с-переходом .липкая-кнопка { transition: none; }
 }
+
+/* экран 02 */
+#экран-02 .плитки-фраз { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--отступ-блока); margin-top: clamp(28px, 4vw, 48px); }
+  #экран-02 .мягкая { position: relative; display: grid; align-content: start; gap: 1rem; min-width: 0;
+      padding: clamp(1.25rem, 2.4vw, 2rem); border-radius: var(--радиус-плитки); border: 1px solid transparent; }
+  #экран-02 .мягкая > * { margin: 0; }
+  #экран-02 .мягкая--1 { grid-column: span 7; }
+  #экран-02 .мягкая--2 { grid-column: span 5; }
+  #экран-02 .мягкая--3 { grid-column: span 5; }
+  #экран-02 .мягкая--4 { grid-column: span 7; }
+  #экран-02 .мягкая--5 { grid-column: span 12; grid-template-columns: auto 1fr; align-items: center; column-gap: 1.25rem; row-gap: .25rem; }
+  #экран-02 .мягкая--5 .мягкая__икон { grid-row: span 2; }
+  #экран-02 .мягкая__икон { width: 2.75rem; height: 2.75rem; border-radius: var(--радиус); display: grid; place-items: center; }
+  #экран-02 .мягкая__икон svg, #экран-02 .мягкая__икон .иконка { width: 1.375rem; height: 1.375rem; }
+  #экран-02 .мягкая__фраза { font: 700 var(--кегль-лид)/1.3 var(--шрифт-заголовков); }
+  #экран-02 .мягкая__кто { display: inline-block; width: fit-content; padding: .3125rem .875rem; border-radius: 9em;
+      font-size: var(--кегль-мелкий); line-height: 1.3; }
+  #экран-02 .мягкая__текст { font-size: var(--кегль-текст); line-height: 1.6; }
+
+  #экран-02.светлый .мягкая { background: var(--цвет-фон-карточки); border-color: var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-02.светлый .мягкая__икон { background: color-mix(in srgb, var(--цвет-акцент) 10%, transparent); color: var(--цвет-акцент); }
+  #экран-02.светлый .мягкая__фраза { color: var(--цвет-текст); }
+  #экран-02.светлый .мягкая__кто { background: var(--цвет-фон-2); color: var(--цвет-текст-мягкий); }
+  #экран-02.светлый .мягкая__текст { color: var(--цвет-текст-мягкий); }
+
+  #экран-02.тёмный .мягкая { background: color-mix(in srgb, var(--цвет-тёмный-фон) 55%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); box-shadow: var(--тень-чип); }
+  #экран-02.тёмный .мягкая__икон { background: color-mix(in srgb, var(--цвет-тёплый) 16%, transparent); color: var(--цвет-тёплый); }
+  #экран-02.тёмный .мягкая__фраза { color: var(--цвет-тёмный-текст); }
+  #экран-02.тёмный .мягкая__кто { background: color-mix(in srgb, var(--цвет-тёмный-текст) 10%, transparent);
+      color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); }
+  #экран-02.тёмный .мягкая__текст { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+
+  #экран-02.светлый .мягкая--цвет, #экран-02.тёмный .мягкая--цвет { background: var(--цвет-акцент-глубже); border-color: transparent; box-shadow: var(--тень-глубокая); }
+  #экран-02.светлый .мягкая--цвет .мягкая__фраза, #экран-02.тёмный .мягкая--цвет .мягкая__фраза { color: var(--цвет-на-акценте); }
+  #экран-02.светлый .мягкая--цвет .мягкая__икон, #экран-02.тёмный .мягкая--цвет .мягкая__икон { background: color-mix(in srgb, var(--цвет-на-акценте) 18%, transparent); color: var(--цвет-на-акценте); }
+  #экран-02.светлый .мягкая--цвет .мягкая__кто, #экран-02.тёмный .мягкая--цвет .мягкая__кто { background: color-mix(in srgb, var(--цвет-на-акценте) 16%, transparent); color: var(--цвет-на-акценте); }
+
+  #экран-02.светлый .мягкая--мята { background: var(--цвет-тёплый-мягкий); border-color: transparent; box-shadow: var(--тень); }
+  #экран-02.светлый .мягкая--мята .мягкая__икон { background: color-mix(in srgb, var(--цвет-фон-карточки) 70%, transparent); color: var(--цвет-акцент-тёмный); }
+  #экран-02.светлый .мягкая--мята .мягкая__фраза { color: var(--цвет-текст); }
+  #экран-02.светлый .мягкая--мята .мягкая__кто { background: color-mix(in srgb, var(--цвет-фон-карточки) 65%, transparent); color: var(--цвет-текст); }
+  #экран-02.тёмный .мягкая--мята { background: color-mix(in srgb, var(--цвет-тёплый) 12%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёплый) 40%, transparent); }
+
+  @media (max-width: 899px) {
+    #экран-02 .плитки-фраз { grid-template-columns: 1fr; }
+    #экран-02 .мягкая--1, #экран-02 .мягкая--2, #экран-02 .мягкая--3, #экран-02 .мягкая--4, #экран-02 .мягкая--5 { grid-column: auto; }
+    #экран-02 .мягкая--5 { grid-template-columns: 1fr; }
+    #экран-02 .мягкая--5 .мягкая__икон { grid-row: auto; }
+  }
