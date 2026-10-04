@@ -1926,3 +1926,110 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-06 .э6-пункт { grid-template-columns: 1fr; }
     #экран-06 .э6-пункт__икон { grid-row: auto; }
   }
+
+/* экран 07 */
+#экран-07 .э7-разворот { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+  #экран-07 .э7-слева { position: sticky; top: 2rem; min-width: 0; }
+  #экран-07 .э7-слева h2 { margin: 0; }
+  #экран-07 .э7-слева .э7-действие { margin-top: clamp(1.25rem, 2.5vw, 2rem); }
+
+  #экран-07 .э7-ещё { margin-top: clamp(1.5rem, 3vw, 2.5rem); display: grid; gap: .375rem; padding: clamp(1.25rem, 2vw, 1.75rem);
+      border-radius: var(--радиус-плитки); border: 1px solid transparent; }
+  #экран-07 .э7-ещё > * { margin: 0; }
+  #экран-07 .э7-рисунок { display: block; width: 100%; max-width: 15rem; height: auto; margin-bottom: .75rem; }
+  #экран-07 .э7-ещё__имя { font-size: var(--кегль-лид); line-height: 1.3; font-weight: 700; }
+  #экран-07 .э7-ещё__текст { font-size: var(--кегль-текст); line-height: 1.5; }
+  #экран-07 .э7-р-знак { font-weight: 700; }
+  #экран-07.тёмный .э7-ещё { background: color-mix(in srgb, var(--цвет-тёмный-фон) 55%, transparent); border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); }
+  #экран-07.тёмный .э7-ещё__имя { color: var(--цвет-тёмный-текст); }
+  #экран-07.тёмный .э7-ещё__текст { color: color-mix(in srgb, var(--цвет-тёмный-текст) 75%, transparent); }
+  #экран-07.тёмный .э7-р-облако1 { fill: color-mix(in srgb, var(--цвет-тёплый) 18%, transparent); stroke: var(--цвет-тёплый); }
+  #экран-07.тёмный .э7-р-облако2 { fill: var(--цвет-акцент); stroke: none; }
+  #экран-07.тёмный .э7-р-знак { fill: var(--цвет-тёплый); }
+  #экран-07.тёмный .э7-р-точка { fill: var(--цвет-тёмный-текст); }
+  #экран-07.тёмный .э7-р-искра { fill: var(--цвет-тёплый); }
+  #экран-07.светлый .э7-ещё { background: var(--цвет-фон-карточки); border-color: var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-07.светлый .э7-ещё__имя { color: var(--цвет-текст); }
+  #экран-07.светлый .э7-ещё__текст { color: var(--цвет-текст-мягкий); }
+  #экран-07.светлый .э7-р-облако1 { fill: var(--цвет-тёплый-мягкий); stroke: var(--цвет-акцент); }
+  #экран-07.светлый .э7-р-облако2 { fill: var(--цвет-акцент); stroke: none; }
+  #экран-07.светлый .э7-р-знак { fill: var(--цвет-акцент); }
+  #экран-07.светлый .э7-р-точка { fill: var(--цвет-фон-карточки); }
+  #экран-07.светлый .э7-р-искра { fill: var(--цвет-акцент); }
+  #экран-07 .э7-справа { display: grid; gap: clamp(1.25rem, 2.5vw, 2rem); min-width: 0; }
+  #экран-07 .э7-список { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+  #экран-07 .э7-пункт { border-radius: var(--радиус-плитки); border: 1px solid transparent; min-width: 0; }
+  #экран-07 .э7-шапка { display: grid; grid-template-columns: auto 1fr auto; column-gap: 1rem; align-items: center; cursor: pointer; list-style: none;
+      padding: clamp(.875rem, 1.6vw, 1.25rem) clamp(1rem, 1.8vw, 1.5rem); }
+  #экран-07 .э7-шапка::-webkit-details-marker { display: none; }
+  #экран-07 .э7-шапка::marker { content: ""; }
+  #экран-07 .э7-икон { width: 2.75rem; height: 2.75rem; border-radius: var(--радиус); display: grid; place-items: center; }
+  #экран-07 .э7-икон svg, #экран-07 .э7-икон .иконка { width: 1.5rem; height: 1.5rem; }
+  #экран-07 .э7-имя { margin: 0; font-size: var(--кегль-лид); line-height: 1.25; font-weight: 700; min-width: 0; }
+  #экран-07 .э7-плюс { width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center; transition: transform .25s ease; }
+  #экран-07 .э7-плюс svg, #экран-07 .э7-плюс .иконка { width: 1rem; height: 1rem; }
+  #экран-07 .э7-пункт[open] .э7-плюс { transform: rotate(45deg); }
+  #экран-07 .э7-ответ { margin: 0; padding: 0 clamp(1rem, 1.8vw, 1.5rem) clamp(1rem, 1.8vw, 1.5rem) calc(clamp(1rem, 1.8vw, 1.5rem) + 3.75rem);
+      font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-07 .э7-действие { margin: 0; }
+
+  #экран-07.светлый .э7-пункт { background: var(--цвет-фон-карточки); border-color: var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-07.светлый .э7-пункт[open] { border-color: var(--цвет-акцент); }
+  #экран-07.светлый .э7-икон { background: color-mix(in srgb, var(--цвет-акцент) 10%, transparent); color: var(--цвет-акцент); }
+  #экран-07.светлый .э7-плюс { background: color-mix(in srgb, var(--цвет-акцент) 10%, transparent); color: var(--цвет-акцент); }
+  #экран-07.светлый .э7-имя { color: var(--цвет-текст); }
+  #экран-07.светлый .э7-ответ { color: var(--цвет-текст-мягкий); }
+
+  #экран-07.тёмный .э7-пункт { background: color-mix(in srgb, var(--цвет-тёмный-фон) 55%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 12%, transparent); box-shadow: var(--тень-чип); }
+  #экран-07.тёмный .э7-пункт[open] { border-color: var(--цвет-тёплый); }
+  #экран-07.тёмный .э7-икон { background: color-mix(in srgb, var(--цвет-тёплый) 16%, transparent); color: var(--цвет-тёплый); }
+  #экран-07.тёмный .э7-плюс { background: color-mix(in srgb, var(--цвет-тёплый) 16%, transparent); color: var(--цвет-тёплый); }
+  #экран-07.тёмный .э7-имя { color: var(--цвет-тёмный-текст); }
+  #экран-07.тёмный .э7-ответ { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+
+  @media (max-width: 899px) {
+    #экран-07 .э7-разворот { grid-template-columns: 1fr; }
+    #экран-07 .э7-слева { display: contents; }
+    #экран-07 .э7-справа { order: 1; }  #экран-07 .э7-ещё { order: 2; margin-top: 0; }  #экран-07 .э7-рисунок { max-width: 10rem; }  #экран-07 .э7-слева .э7-действие { order: 3; margin-top: 0; }
+  }
+  @media (max-width: 480px) {
+    #экран-07 .э7-шапка { column-gap: .75rem; }
+    #экран-07 .э7-икон { width: 2.25rem; height: 2.25rem; }  #экран-07 .э7-икон svg, #экран-07 .э7-икон .иконка { width: 1.25rem; height: 1.25rem; }
+    #экран-07 .э7-ответ { padding-left: clamp(1rem, 1.8vw, 1.5rem); }
+  }
+
+/* экран 08 */
+#экран-08 .э8-плита { position: relative; max-width: 52rem; margin-inline: auto; display: grid; justify-items: center; text-align: center;
+      gap: clamp(1rem, 2vw, 1.5rem); padding: clamp(2rem, 5vw, 3.75rem) clamp(1.25rem, 4vw, 3.5rem);
+      border-radius: var(--радиус-плитки); border: 1px solid transparent; }
+  #экран-08 .э8-плита > * { margin: 0; min-width: 0; }
+  #экран-08 .э8-лицо { width: clamp(6rem, 12vw, 8rem); height: clamp(6rem, 12vw, 8rem); border-radius: 50%; object-fit: cover; object-position: center top;
+      border: 3px solid transparent; }
+  #экран-08 .э8-лицо { margin: 0; overflow: hidden; }
+  #экран-08 .э8-лицо img { display: block; width: 220%; max-width: none; height: auto; margin: -8% 0 0 -60%; }
+  #экран-08 .э8-плита h2 { margin-inline: auto; text-wrap: balance; }
+  #экран-08 .э8-лид { margin-inline: auto; max-width: 38rem; font-size: var(--кегль-лид); line-height: 1.5; }
+  #экран-08 .э8-действие { margin-top: clamp(.25rem, 1vw, .75rem); }
+  #экран-08 .э8-подпись { display: inline-grid; grid-template-columns: auto 1fr; align-items: center; column-gap: .75rem; text-align: left;
+      padding: .5rem 1rem .5rem .5rem; border-radius: 9em; border: 1px solid transparent; font-size: var(--кегль-мелкий); line-height: 1.4; }
+  #экран-08 .э8-икон { width: 2.25rem; height: 2.25rem; border-radius: var(--радиус); display: grid; place-items: center; }
+  #экран-08 .э8-икон svg, #экран-08 .э8-икон .иконка { width: 1.25rem; height: 1.25rem; }
+
+  #экран-08.светлый .э8-плита { background: var(--цвет-фон-карточки); border-color: var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-08.светлый .э8-лицо { background: color-mix(in srgb, var(--цвет-акцент) 10%, transparent); border-color: var(--цвет-акцент); }
+  #экран-08.светлый .э8-лид { color: var(--цвет-текст-мягкий); }
+  #экран-08.светлый .э8-подпись { background: color-mix(in srgb, var(--цвет-акцент) 8%, transparent); border-color: var(--цвет-линия); color: var(--цвет-текст-мягкий); }
+  #экран-08.светлый .э8-икон { background: color-mix(in srgb, var(--цвет-акцент) 12%, transparent); color: var(--цвет-акцент); }
+
+  #экран-08.тёмный .э8-плита { background: color-mix(in srgb, var(--цвет-тёмный-фон) 55%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 14%, transparent); box-shadow: var(--тень-глубокая); }
+  #экран-08.тёмный .э8-лицо { background: color-mix(in srgb, var(--цвет-тёплый) 14%, transparent); border-color: var(--цвет-тёплый); }
+  #экран-08.тёмный .э8-лид { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-08.тёмный .э8-подпись { background: color-mix(in srgb, var(--цвет-тёмный-текст) 7%, transparent);
+      border-color: color-mix(in srgb, var(--цвет-тёмный-текст) 14%, transparent); color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-08.тёмный .э8-икон { background: color-mix(in srgb, var(--цвет-тёплый) 16%, transparent); color: var(--цвет-тёплый); }
+
+  @media (max-width: 480px) {
+    #экран-08 .э8-подпись { border-radius: var(--радиус-плитки); }
+  }
