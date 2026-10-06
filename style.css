@@ -1812,7 +1812,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-02 .мягкая__икон .иконка { color: inherit; }
 
 /* экран 03 */
-#экран-03 .э3-разворот { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+#экран-03 .э3-разворот { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
   #экран-03 .э3-лево { display: grid; gap: 1.5rem; align-content: start; min-width: 0; }
   #экран-03 .э3-лево > * { margin: 0; }
   #экран-03 .э3-слова { display: grid; gap: .625rem; justify-items: start; }
@@ -1853,6 +1853,29 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   }
 
   #экран-03 .э3-ряд__икон .иконка { color: inherit; }
+
+  #экран-03 .э3-матрица { margin: .5rem 0 0; padding: clamp(.75rem, 2.6vw, 1.75rem); border-radius: var(--радиус-плитки);
+      background: var(--цвет-фон-карточки); box-shadow: var(--тень); container-type: inline-size; max-width: 30rem; }
+  #экран-03 .э3-матрица__сетка { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.45fr); }
+  #экран-03 .э3-кл { display: flex; flex-direction: column; justify-content: space-between; gap: .25rem; min-width: 0; min-height: 22cqi;
+      padding: .35rem .25rem .3rem .4rem; border-right: 1.5px solid var(--цвет-акцент); border-bottom: 1.5px solid var(--цвет-акцент); }
+  #экран-03 .э3-кл:nth-child(4n+3) { border-left: 1.5px solid var(--цвет-акцент); }
+  #экран-03 .э3-кл--внеш { border-color: color-mix(in srgb, var(--цвет-акцент) 40%, transparent); }
+  #экран-03 .э3-кл--дата { grid-column: span 3; border-left: 1.5px solid var(--цвет-акцент); border-top: 1.5px solid var(--цвет-акцент);
+      justify-content: center; gap: .5rem; }
+  #экран-03 .э3-кл--дата + .э3-кл--внеш { border-top: 1.5px solid color-mix(in srgb, var(--цвет-акцент) 40%, transparent); }
+  #экран-03 .э3-кл--быт { grid-column: 2; border-left: 1.5px solid color-mix(in srgb, var(--цвет-акцент) 40%, transparent); }
+  #экран-03 .э3-кл__имя { font-size: var(--кегль-мелкий); line-height: 1.2; font-weight: 600; letter-spacing: -.01em; color: var(--цвет-текст-мягкий); }
+  #экран-03 .э3-кл__цифры { font: 700 clamp(1.125rem, 5.2cqi, 1.75rem)/1 var(--шрифт-заголовков); letter-spacing: .01em;
+      color: var(--цвет-акцент-тёмный); text-align: center; padding-bottom: .3rem; min-height: 1em; }
+  #экран-03 .э3-кл--дата .э3-кл__имя b { margin-left: .4rem; font: 700 var(--кегль-лид) var(--шрифт-заголовков); color: var(--цвет-текст); }
+  #экран-03 .э3-кл--дата .э3-кл__имя b.э3-судьба { color: var(--цвет-акцент-тёмный); }
+  @media (max-width: 380px) {
+    #экран-03 .э3-матрица { padding: .5rem; }
+    #экран-03 .э3-кл { padding: .3rem .1rem .25rem .25rem; }
+    #экран-03 .э3-кл__имя { letter-spacing: -.02em; }
+  }
+  #экран-03 .э3-матрица__подпись { margin: 1rem 0 0; text-align: center; font: 600 var(--кегль-текст)/1.4 var(--шрифт-заголовков); color: var(--цвет-текст); }
 
 /* экран 04 */
 #экран-04 .разборы { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--отступ-блока); align-items: stretch;
