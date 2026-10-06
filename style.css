@@ -1870,10 +1870,12 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
       color: var(--цвет-акцент-тёмный); text-align: center; padding-bottom: .3rem; min-height: 1em; }
   #экран-03 .э3-кл--дата .э3-кл__имя b { margin-left: .4rem; font: 700 var(--кегль-лид) var(--шрифт-заголовков); color: var(--цвет-текст); }
   #экран-03 .э3-кл--дата .э3-кл__имя b.э3-судьба { color: var(--цвет-акцент-тёмный); }
-  @media (max-width: 380px) {
-    #экран-03 .э3-матрица { padding: .5rem; }
-    #экран-03 .э3-кл { padding: .3rem .1rem .25rem .25rem; }
-    #экран-03 .э3-кл__имя { letter-spacing: -.02em; }
+  @media (max-width: 400px) {
+    #экран-03 .э3-матрица { padding: .375rem; }
+    #экран-03 .э3-матрица__сетка { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.4fr); }
+    #экран-03 .э3-кл { padding: .3rem .05rem .25rem .2rem; }
+    #экран-03 .э3-кл__имя { letter-spacing: -.03em; }
+    #экран-03 .э3-кл--дата .э3-кл__имя b { font-size: var(--кегль-текст); margin-left: .25rem; }
   }
   #экран-03 .э3-матрица__подпись { margin: 1rem 0 0; text-align: center; font: 600 var(--кегль-текст)/1.4 var(--шрифт-заголовков); color: var(--цвет-текст); }
 
