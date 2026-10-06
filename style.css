@@ -2134,8 +2134,6 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-08 .э8-подпись { border-radius: var(--радиус-плитки); }
   }
 
-  #экран-08 { --цвет-кнопки: var(--цвет-акцент-яркий); --цвет-на-кнопке: var(--цвет-тёмный-фон); }
-
 /* экран 09 */
 #экран-09 .блок__внутри { border-top: 0; padding-top: 0; }
   #экран-09 .э9-плита { display: grid; gap: clamp(1.5rem, 3vw, 2.25rem); padding: clamp(1.5rem, 3.5vw, 2.5rem);
